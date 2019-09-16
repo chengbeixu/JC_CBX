@@ -43,7 +43,7 @@ public class YouXi extends Frame {
 	}
 	
 	public void paint(Graphics g) {
-		System.out.println("123456789");
+		System.out.println("123456789000");
 		g.fillRect(100, 100, 50, 50);
 	}
 
