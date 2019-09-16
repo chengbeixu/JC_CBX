@@ -9,20 +9,20 @@ import java.awt.event.WindowEvent;
 
 public class TankFrame extends Frame {
 	
-	public int X = 20, Y = 20;//·½¿éµÄ×ø±ê
+	public int X = 20, Y = 20;//æ–¹å—çš„åæ ‡
 	
-	public int ZX = 0, ZY = 0;//·½¿é×ø±êµÄÔö¼õÁ¿
+	public int ZX = 0, ZY = 0;//æ–¹å—åæ ‡çš„å¢å‡é‡
 	
 	public TankFrame() {
-		setSize(800, 600);//´°¿Ú´óĞ¡
-		setResizable(false);//²»¿Éµ÷Õû´óĞ¡
-		setTitle("Ì¹¿Ë´óÕ½");//´°¿Ú±êÌâ
-		setVisible(true);//´°¿Ú¿É¼û
+		setSize(800, 600);//çª—å£å¤§å°
+		setResizable(false);//ä¸å¯è°ƒæ•´å¤§å°
+		setTitle("å¦å…‹å¤§æˆ˜");//çª—å£æ ‡é¢˜
+		setVisible(true);//çª—å£å¯è§
 		
-//		¶¨Òå¼üÅÌÊÂ¼ş
+//		å®šä¹‰é”®ç›˜äº‹ä»¶
 		this.addKeyListener(new MyKeyListener());
 		
-//		ÄÜ¹Ø±Õ´°¿ÚµÄ·½·¨
+//		èƒ½å…³é—­çª—å£çš„æ–¹æ³•
 		addWindowListener(new WindowAdapter() {
 			
 			@Override
@@ -32,50 +32,50 @@ public class TankFrame extends Frame {
 		});
 	}
 	
-//	ÔÚ´°¿ÚÖĞ»­Õı·½ĞÎ
+//	åœ¨çª—å£ä¸­ç”»æ­£æ–¹å½¢
 	@Override
 	public void paint(Graphics g) {
 //		System.out.println("123");
-		g.fillRect(X, Y, 50, 50);//(XÖá, YÖá, ³¤, ¿í)
+		g.fillRect(X, Y, 50, 50);//(Xè½´, Yè½´, é•¿, å®½)
 		X+=ZX;
 		Y+=ZY;
 	}
 	
-//	×Ô¶¨Òå¼üÅÌ¼àÌıÀà
+//	è‡ªå®šä¹‰é”®ç›˜ç›‘å¬ç±»
 	class MyKeyListener extends KeyAdapter {
 
-//		ÔÚ¼ü±»°´ÏÂÈ¥µÄÊ±ºò±»µ÷ÓÃ
+//		åœ¨é”®è¢«æŒ‰ä¸‹å»çš„æ—¶å€™è¢«è°ƒç”¨
 		@Override
 		public void keyPressed(KeyEvent e) {
-//			System.out.println("¼üÅÌ±»°´ÏÂ"+e);
+//			System.out.println("é”®ç›˜è¢«æŒ‰ä¸‹"+e);
 //			if(e.getKeyCode()==38) {
 //				System.out.println("38----------");
 //			}
 			switch (e.getKeyCode()) {
-			case 37://×ó
+			case 37://å·¦
 				X=X-10;
 				break;
-			case 38://ÉÏ
+			case 38://ä¸Š
 				Y=Y-10;
 				break;
-			case 39://ÓÒ
+			case 39://å³
 				X=X+10;
 				break;
-			case 40://ÏÂ
+			case 40://ä¸‹
 				Y=Y+10;
 				break;
 			default:
 				break;
 			}
 //			X+=20;
-			//Õâ¸ö·½·¨»á×Ô¶¯µÄÈ¥µ÷ÓÃpaint·½·¨£¬¼ä½ÓµÄÊµÏÖÒ³ÃæµÄ¸üĞÂ£¬´Ó¶øÊ¹Õı·½¿é¶¯ÆğÀ´
+			//è¿™ä¸ªæ–¹æ³•ä¼šè‡ªåŠ¨çš„å»è°ƒç”¨paintæ–¹æ³•ï¼Œé—´æ¥çš„å®ç°é¡µé¢çš„æ›´æ–°ï¼Œä»è€Œä½¿æ­£æ–¹å—åŠ¨èµ·æ¥
 			repaint();
 		}
 
-//		ÔÚ¼ü±»µ¯ÆğµÄÊ±ºò±»µ÷ÓÃ
+//		åœ¨é”®è¢«å¼¹èµ·çš„æ—¶å€™è¢«è°ƒç”¨
 		@Override
 		public void keyReleased(KeyEvent e) {
-			System.out.println("¼üÅÌ±»µ¯Æğ");
+			System.out.println("é”®ç›˜è¢«å¼¹èµ·");
 //			ZX = 0;
 //			ZY = 0;
 		}

@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		TankFrame tf = new TankFrame();
 		
-//		Ñ­»·Ë¢ÐÂ
+//		å¾ªçŽ¯åˆ·æ–°
 		while(true) {
 			Thread.sleep(50);
 			tf.repaint();
