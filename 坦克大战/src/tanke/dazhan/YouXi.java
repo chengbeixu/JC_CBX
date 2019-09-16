@@ -43,7 +43,7 @@ public class YouXi extends Frame {
 	}
 	
 	public void paint(Graphics g) {
-		System.out.println("123456789000111改格式之后的--先提交本地--再次提交本地");
+		System.out.println("123456789000111改格式之后的--先提交本地--再次提交本地--提交到服务器");
 		g.fillRect(100, 100, 50, 50);
 	}
 
